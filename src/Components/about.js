@@ -1,16 +1,23 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {connect} from 'react-redux'
 
-
+AOS.init();
 
 const Cards = (props) =>{
     return(
         <div className="col-md-4">
             <div className="card border-dark mb-3">
                 <div className="card-header">
-                    <img alt="cardpic" src={`https://joeschmoe.io/api/v1/${props.cardname}`} />
+                    <img 
+                    alt="cardpic" 
+                    src={`https://joeschmoe.io/api/v1/${props.cardname}`} />
                 </div>
-                <div className="card-body text-center text-dark">
+                <div 
+                data-aos="zoom-in" 
+                data-aos-duration="1000"
+                className="card-body text-center text-dark">
                     <h2 className="card-title">{props.cardname}</h2>
                     <h5 className="card-text">{props.cardDesignation}</h5>
                 </div>
@@ -27,8 +34,10 @@ class About extends React.Component{
     render(){
         return(
             <div>
-                 <h1 className="text-center mt-5">About Us</h1>
-                 <div className="row">
+                 <h1 
+                 data-aos="zoom-in-right"
+                 className="text-center mt-5">About Us</h1>
+                 <div className="row m-5">
                     {
                         this.props.data.map(getCardData=>{
                         

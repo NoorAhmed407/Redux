@@ -6,6 +6,7 @@ const iState = {
         Title: "Development Experiences",
         subTitle: "Well known UI Frameworks"
     },
+
     aboutData: {
         cardData: [
             {
@@ -27,7 +28,30 @@ const iState = {
             }
         ]
     },
-    serviceData: ""
+
+    serviceData: {
+        serviceCards: [
+            {
+                id: 1,
+                serviceName: "Web Development",
+                seviceImg: require('./images/web.png')
+            },
+
+            {
+                id: 2,
+                serviceName: "Mobile Development",
+                seviceImg: require('./images/mobile.png')
+            },
+
+            {
+                id: 3,
+                serviceName: "Games Development",
+                seviceImg: require('./images/game.png')
+            },
+        ]
+
+        
+    }
 }
 
 const reducer = (state=iState,action)=>{

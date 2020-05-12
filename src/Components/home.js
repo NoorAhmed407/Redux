@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {connect} from 'react-redux';
 
-
+    AOS.init();
 class Home extends Component{
+
 
 styles = {
      main: {
@@ -20,17 +23,22 @@ styles = {
 
     };
 
-
     render(){
         return(
             <div className="mx-auto text-white text-center" 
             style={this.styles.main}>
-                <h1 className="font-weight-bold p-2 bg-success" 
+                <h1 
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                className="font-weight-bold p-2 bg-success" 
                 style={this.styles.heading}>
                     {this.props.data.Title}
                 </h1>
 
-                <h2 className="mt-3">{this.props.data.subTitle}</h2>               
+                <h2 
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                className="mt-3">{this.props.data.subTitle}</h2>               
             </div>
         );
     }

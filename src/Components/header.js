@@ -15,9 +15,9 @@ class Header extends Component{
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div style={{fontSize: 18}} className="navbar-nav mx-auto">
-                            <Link className="nav-item nav-link active" to="/">Home <span className="sr-only">(current)</span></Link>
+                            <Link className="nav-item nav-link" to="/">Home</Link>
                             <Link className="nav-item nav-link" to="/about">About</Link>
-                            <Link className="nav-item nav-link" to="/services">Services</Link>
+                            <Link className="nav-item nav-link" to="/service">Services</Link>
                         </div>
                     </div>
                     </div>
