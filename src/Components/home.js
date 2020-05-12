@@ -25,7 +25,8 @@ styles = {
         return(
             <div className="mx-auto text-white text-center" 
             style={this.styles.main}>
-                <h1 className="font-weight-bold p-2 bg-success" style={this.styles.heading}>
+                <h1 className="font-weight-bold p-2 bg-success" 
+                style={this.styles.heading}>
                     {this.props.data.Title}
                 </h1>
 

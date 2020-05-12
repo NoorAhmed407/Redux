@@ -6,7 +6,27 @@ const iState = {
         Title: "Development Experiences",
         subTitle: "Well known UI Frameworks"
     },
-    aboutData: "",
+    aboutData: {
+        cardData: [
+            {
+                id: 1,
+                name: "Noor Uddin",
+                Designation: "CEO"
+            },
+
+            {
+                id: 2,
+                name: "Talha Mansoor",
+                Designation: "Apps Developer"
+            },
+
+            {
+                id: 3,
+                name: "Abdul Rafay",
+                Designation: "SQA"
+            }
+        ]
+    },
     serviceData: ""
 }
 
