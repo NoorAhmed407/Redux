@@ -11,19 +11,19 @@ const iState = {
         cardData: [
             {
                 id: 1,
-                name: "Noor Uddin",
+                name: "Person1",
                 Designation: "CEO"
             },
 
             {
                 id: 2,
-                name: "Talha Mansoor",
+                name: "Person2",
                 Designation: "Apps Developer"
             },
 
             {
                 id: 3,
-                name: "Abdul Rafay",
+                name: "Person3",
                 Designation: "SQA"
             }
         ]
