@@ -36,7 +36,9 @@ class Contact extends Component{
                 className="text-center mt-5">Contact Us</h1>
 
                 <div className="col-md-6 mx-auto">
-                    <form>
+                    <form className="m-5"
+                    data-aos="zoom-in-left"
+                    data-aos-duration="1000">
                         <label>Name: </label>
                         <input 
                         name="fullname"
