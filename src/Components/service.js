@@ -31,6 +31,22 @@ const SeviceCards = (props)=>{
 
 
 class Services extends Component{
+
+    getServices = (props) =>{
+        const getservice = 
+        this.props.data.map(getServiceData=>{
+            return(
+                <SeviceCards
+                key={getServiceData.id}
+                servicename = {getServiceData.serviceName}
+                serviceimg = {getServiceData.seviceImg}
+                />
+            );
+        });
+
+        return getservice;
+    }
+    
     render(){
         return(
             <div>
@@ -39,16 +55,7 @@ class Services extends Component{
                className="mt-5 text-center">Services</h1>
                <div className="row m-5">
                     {
-                        this.props.data.map(getServiceData=>{
-                            return(
-                                <SeviceCards
-                                key={getServiceData.id}
-                                servicename = {getServiceData.serviceName}
-                                serviceimg = {getServiceData.seviceImg}
-                                />
-                            )
-                        })
-                
+                        this.getServices()
                     }
                </div>
             </div>

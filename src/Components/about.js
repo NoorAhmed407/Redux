@@ -31,6 +31,23 @@ const Cards = (props) =>{
 
 class About extends React.Component{
 
+
+    getCards = (props) =>{
+       const getcard =  this.props.data.map(getCardData=>{
+                        
+            return(
+                <Cards
+                key={getCardData.id}
+                cardname={getCardData.name}
+                cardDesignation={getCardData.Designation}           
+            />
+            );
+        });
+
+        return getcard;
+    }
+
+
     render(){
         return(
             <div>
@@ -39,19 +56,9 @@ class About extends React.Component{
                  className="text-center mt-5">About Us</h1>
                  <div className="row m-5">
                     {
-                        this.props.data.map(getCardData=>{
-                        
-                            return(
-                                <Cards
-                                key={getCardData.id}
-                                cardname={getCardData.name}
-                                cardDesignation={getCardData.Designation}           
-                            />
-                            ) 
-                        })
+                       this.getCards()
                     }
-                 </div>
-                
+                 </div>           
             </div>
         );
     }

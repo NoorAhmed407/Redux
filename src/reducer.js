@@ -49,9 +49,8 @@ const iState = {
                 seviceImg: require('./images/game.png')
             },
         ]
+    },
 
-        
-    }
 }
 
 const reducer = (state=iState,action)=>{
