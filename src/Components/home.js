@@ -18,7 +18,7 @@ styles = {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
         alignItems: "center",
-        height: "80vh",
+        height: "100vh",
         },
 
     };

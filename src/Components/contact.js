@@ -10,9 +10,15 @@ AOS.init();
 class Contact extends Component{
 
     state = {
+        headData:{
+            headName: "",
+            headEmail: "",
+            headPhone: "",
+            headMsg: ""
+        },
         fullname : "",
         email: "",
-        phone: 0,
+        phone: "",
         message: ""
     };
 
@@ -22,10 +28,25 @@ class Contact extends Component{
 
     handleClick=(e)=>{
         let st = this.state;
-        if(st.fullname && st.email && st.phone && st.message != "" 
-        ? alert(`Dear ${st.fullname} thank you for your response! you will be served soon`) 
-        : alert("Please Fill all the required fields"));
-        e.preventDefault();
+        if(st.fullname && st.email && st.phone && st.message !== ""){
+            alert(`Dear ${st.fullname} thank you for your response! you will be served soon`);
+            this.setState(prevState => ({
+                headData: {
+                    ...prevState.headData,
+                    headName: this.state.fullname,
+                    headPhone: this.state.phone,
+                    headEmail: this.state.email,
+                    headMsg: this.state.message
+                }
+            }))
+
+
+        }
+        else{ 
+            alert("Please Fill all the required fields");
+    }
+    e.preventDefault();
+       
     }
 
     render(){
@@ -69,6 +90,14 @@ class Contact extends Component{
                         <button 
                         onClick={this.handleClick}
                         className="btn btn-lg btn-warning float-right">Send</button>
+
+                        <h2>
+                            {this.state.headData.headName}  <br/>
+                            {this.state.headData.headEmail} <br/>
+                            {this.state.headData.headPhone} <br/>
+                            {this.state.headData.headMsg}   <br/>
+                        </h2>
+
                     </form>
                 </div>
 
