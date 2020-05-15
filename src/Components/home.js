@@ -23,7 +23,17 @@ styles = {
 
     };
 
+    componentDidMount = ()=>{
+
+        setTimeout(()=>{
+            this.props.changeSubtitle('Group of Software Engineers')
+        },3000)
+    
+      
+    }
+    
     render(){
+        
         return(
             <div className="mx-auto text-white text-center" 
             style={this.styles.main}>
@@ -38,7 +48,11 @@ styles = {
                 <h2 
                 data-aos="fade-left"
                 data-aos-duration="1500"
-                className="mt-3">{this.props.data.subTitle}</h2>               
+                className="mt-3">
+
+                    {this.props.data.subTitle}
+                    
+                </h2>               
             </div>
         );
     }
@@ -51,5 +65,11 @@ const mapStateToProps = (state) =>{
     }
 }
 
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        changeSubtitle: (sbttl)=>{dispatch({type: 'CHANGE_SUBTITLE', payload: sbttl})}
+    }
+}
 
-export default  connect(mapStateToProps)(Home);
+
+export default  connect(mapStateToProps,mapDispatchToProps)(Home);

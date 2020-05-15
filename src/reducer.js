@@ -54,17 +54,26 @@ const iState = {
     footerData: {
         iconarr: 
         [
-            {id: 1, value: "facebook"},
-            {id: 2, value: "whatsapp"},
-            {id: 3, value: "instagram"}
+            {id: 1, value: "facebook", route: "https://www.facebook.com/"},
+            {id: 2, value: "whatsapp", route: "https://web.whatsapp.com/"},
+            {id: 3, value: "instagram", route: "https://www.instagram.com/"}
         ],
-
-        route: ["https://www.facebook.com/","https://web.whatsapp.com/", "https://www.instagram.com/"]
    }
 }
 
 
 const reducer = (state=iState,action)=>{
+
+    if(action.type === 'CHANGE_SUBTITLE'){
+        return {
+            ...state,
+            homeData:{
+                ...state.homeData,
+                subTitle: action.payload
+            }
+            
+        }
+    }
     return state;
 }
 

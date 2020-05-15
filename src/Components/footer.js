@@ -17,11 +17,11 @@ class Footer extends Component{
                         <div className="col-md-4 mx-auto">
                             <h3 className="text-center">Join us</h3>
                             {
-                               this.props.data.iconarr.map((data,ind)=>{
+                               this.props.data.iconarr.map((data)=>{
                                     return(
                                         <a
                                         target="_blank"
-                                        href={this.props.data.route[ind]}>
+                                        href={data.route}>
                                         <img
                                         alt="social"
                                         key={data.id}
