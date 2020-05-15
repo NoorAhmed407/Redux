@@ -91,7 +91,7 @@ class Contact extends Component{
                         onClick={this.handleClick}
                         className="btn btn-lg btn-warning float-right">Send</button>
 
-                        <h2>
+                        <h2 className="mt-5">
                             {this.state.headData.headName}  <br/>
                             {this.state.headData.headEmail} <br/>
                             {this.state.headData.headPhone} <br/>

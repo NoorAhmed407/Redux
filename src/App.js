@@ -4,6 +4,7 @@ import Home from './Components/home';
 import About from './Components/about';
 import Services from './Components/service';
 import Contact from './Components/contact';
+import Footer from './Components/footer';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/service" component={Services}/>
           <Route path="/contact" component={Contact}/>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

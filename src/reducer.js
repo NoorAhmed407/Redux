@@ -51,7 +51,18 @@ const iState = {
         ]
     },
 
+    footerData: {
+        iconarr: 
+        [
+            {id: 1, value: "facebook"},
+            {id: 2, value: "whatsapp"},
+            {id: 3, value: "instagram"}
+        ],
+
+        route: ["https://www.facebook.com/","https://web.whatsapp.com/", "https://www.instagram.com/"]
+   }
 }
+
 
 const reducer = (state=iState,action)=>{
     return state;
