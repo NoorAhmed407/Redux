@@ -27,9 +27,7 @@ styles = {
 
         setTimeout(()=>{
             this.props.changeSubtitle('Group of Software Engineers')
-        },3000)
-    
-      
+        },3000) 
     }
     
     render(){
